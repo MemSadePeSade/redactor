@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.6.2)
 
-project(redactor 0.0.$ENV{TRAVIS_BUILD_NUMBER})
+project(redactor VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER})
 
 add_executable(redactor  main.cpp)
 
