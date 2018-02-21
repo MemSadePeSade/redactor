@@ -2,6 +2,7 @@
 #include"Figures.h"
 
 #include<list>
+#include<string>
 
 /////////////////////////////////////// 
 struct Message {};
