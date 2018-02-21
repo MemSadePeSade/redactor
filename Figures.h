@@ -1,5 +1,16 @@
 #pragma once
-struct GDI {}; // graphical device interface
+
+/*!
+\brief graphical device interface
+*/
+struct GDI; 
+
+/*!
+\brief Ѕазовый класс дл€ всех графических примитивов
+
+ƒанный класс имеет только одну простую цель: проиллюстрировать то,
+как Doxygen документирует наследование
+*/
 struct Figure
 {
 	int x, y;  // положение фигуры
@@ -22,16 +33,27 @@ struct Figure
 	virtual void DrawSel(GDI* pDC);
 };
 
+/*!
+\brief класс дл€ графического примитива Figure1  
+*/
 struct Figure1 : Figure
 {
 	virtual void JustDraw(GDI* pDC) {};
 	virtual void DrawSel(GDI* pDC) {};
 };
+
+/*!
+\brief класс дл€ графического примитива Figure2  
+*/
 struct Figure2 : Figure
 {
 	virtual void JustDraw(GDI* pDC) {};
 	virtual void DrawSel(GDI* pDC) {};
 };
+
+/*!
+\brief класс дл€ графического примитива Figure3
+*/
 struct Figure3 : Figure
 {
 	virtual void JustDraw(GDI* pDC) {};

@@ -1,23 +1,24 @@
 #include"Controller.h"
 #include"Figures.h"
-
 #include<list>
 #include<string>
 
-//////////////////////////////////////////  GUI  handlers
+/*!
+Получает сообщение от операционной системы
+*/
 int GetMessage(Message* info) { return 0; };
-int TranslateMessage(Message* info)
-{
-	// транслировать нажатие клавиши в сообщение
-	return 0;
-};
+
+/*!
+Отсылает сообщение в нужные обработчики
+*/
 int DispatchMessage(Message* info)
 {
-	// отослать сообщение в нужные обработчики
 	return 0;
 };
 
-
+/*!
+Обработчик нажатия левой клавиши мыши
+*/
 void OnLButtonDown(Message* info)
 {
 	/*
@@ -31,6 +32,9 @@ void OnLButtonDown(Message* info)
 	*/
 };
 
+/*!
+Обработчик нажатия клавиши клавиатуры
+*/
 void OnKeyDown(Message* info)
 {
 	/*
@@ -42,6 +46,9 @@ void OnKeyDown(Message* info)
 	*/
 };
 
+/*!
+Функция рисования
+*/
 void OnDraw(GDI* pDC)
 {
 	/*
@@ -56,8 +63,8 @@ int main()
 	WNDCLASS windowClass;
 
 	Message message;
-	while (GetMessage(&message)) {
-		TranslateMessage(&message);
+	while (GetMessage(&message)) 
+	{
 		DispatchMessage(&message);
 	}
 	return 0;
