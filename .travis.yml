@@ -24,11 +24,6 @@ addons:
       - doxygen-gui
       - graphviz
 
-before_script:
-  - cd ${TRAVIS_BUILD_DIR}
-  - export CXX=${CXX_COMPILER}
-  - export CC=${C_COMPILER}
-
 script:
   - cmake .
   - cmake --build .
